@@ -1,16 +1,21 @@
+# Collaboration and Competition Projet
+# A collaborative continuous multi-agent Reinforcement Learning study : Unity Tennis environement.
+
 ## Abstract
 
 The pairing of deep neural network and Reinforcment Learning and its improvements has outperformed the historical methods on a large panel of environment.  In this work we applied a state-of the art policy-based method to directly learn the optimal policy in the context of Multi-Agent framework.  We adapted the proximal policy optimization technique actor-critic style for the benchmark Unity game environment Tennis. We  have  demonstrated  great  performances  and  but a  great  instability  with  this  method that need to be improved. Nevertheless, the game environment is considered solved with a slow learning curve.
 
-## Theory
+## Introduction
 
-During this work, we made several attempts to find the optimal policy for the Reacher environment. We describe here the PPO actor-critic algorithm we used and its underlying theory.
+Reinforcement learning is a framework that allows a smart agent to act with a provided environment and find the optimal policy within the environment. Since we don't know the intrinsic dynamic of the Markov Decision Process we discover the policy by sampling its dynamic. Thus, the historical idea derived from dynamic programming is based on the famous recursive Bellman Equation that led to a variety of algorithms commonly used for a learning agent \citep{o2018uncertainty}. \\
+However, there is also a more direct way to learn an optimal policy. Rather than focusing on learning a state values or states action values could we straight learned the policy ? This is at the heart branch field in RL named Policy-based methods where we learn directly an optimization-based optimal policy. Many algorithms have been suggested by combinatorial optimization as Hill-climbing, Cross entropy method or evolutionary strategies. But gradient-descent based algorithm have made the success of this field as a faster way to learn a good policy, more robust and easy to use with back-propagation or graph based optimization methods widely used for Neural Network. The REINFORCE algorithm from 1992 \citep{williams1992simple} has been a profound achievement before more data-efficient method has been created.
 \\
-We consider a smart agent that take an action \textbf{$A_t$} in an environment at each time step \textbf{$t$}. The agent interact with this environment that return an observation \textbf{$O_t$}, which we consider for simplification to be its internal states \textbf{$S_t$}. The environment is formally described by a Markov Decision Process where the current state \textbf{$S_t$} completely characterize the process.
-The goal is to find the optimal policy $\pi^* (s|a)$ by maximizing the expected total reward. We consider in this work, that we sample a stochastic policy from a normal law $a_t ~ \pi(s_t|a_t)$ with $\pi(s_t|a_t) \sim \mathcal{N}(\mu,\,\sigma^{2})$. We describe the problem as an gradient optimization algorithm and a policy-based method as an episodic-return objective of the form:
-$$ g = \mathbb{E}[ \sum_{t=0}^{\inf} At \nabla_{\theta} \pi_{\theta}(s_t|a_t)] $$
+On an other hand, dealing with large continuous states and actions has been a tough barrier that has been tackle first by \citep{mnih2013playing}, with the power of Neural Network generalization. Combining a deep neural network and the usual Q-learning algorithm has considerably enhanced the benchmark scores on the suite of controlling ATARI games and outperformed significantly human-based performance. Since the kick-start of this new Deep-RL field many improvement and variant have been suggested and outperformed the DQN algorithm.
+\\
+In this case study, we will implement the core of the Proximal Policy Optimization algorithm \citep{schulman2017proximal} more data-efficient than the REINFORCE algorithm with minor changes to deal with the continuous action spaces of the Unity Reacher environment
 
 ## Experiments
+During this work, we follow several improvement of the PPO algorithm suggested over the year and in the context of multi-agent learning. We don't use the 
 
 <p align="center">
   <img src= "https://github.com/GabrielLinear/MAPPO/blob/main/Images/MAPPO_Scheme.jpg" />
