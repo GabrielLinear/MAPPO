@@ -1,4 +1,4 @@
-# Collaboration and Competition Projet : A collaborative continuous multi-agent Reinforcement Learning study : Unity Tennis environment.
+# A collaborative continuous multi-agent Reinforcement Learning study : Unity Tennis environment.
 ## Abstract
 
 The pairing of deep neural network and Reinforcment Learning and its improvements has outperformed the historical methods on a large panel of environment.  In this work we applied a state-of the art policy-based method to directly learn the optimal policy in the context of Multi-Agent framework.  We adapted the proximal policy optimization technique actor-critic style for the benchmark Unity game environment Tennis. We  have  demonstrated  great  performances  and  but a  great  instability  with  this  method that need to be improved. Nevertheless, the game environment is considered solved with a slow learning curve.
