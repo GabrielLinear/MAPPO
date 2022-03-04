@@ -1,5 +1,5 @@
 # Collaboration and Competition Projet
-# A collaborative continuous multi-agent Reinforcement Learning study : Unity Tennis environement.
+<h2> A collaborative continuous multi-agent Reinforcement Learning study : Unity Tennis environment. </h2>
 
 ## Abstract
 
@@ -15,6 +15,12 @@ On an other hand, dealing with large continuous states and actions has been a to
 In this case study, we will implement the core of the Proximal Policy Optimization algorithm \citep{schulman2017proximal} more data-efficient than the REINFORCE algorithm with minor changes to deal with the continuous action spaces of the Unity Reacher environment
 
 ## Experiments
+For these experiments the algorithm run on a laptop with a GPU GTX 1050. We learned our neural networks with Torch and the GPU for python 3.6. We give open access to the python code in this Git-Hub.
+\\
+The environment provides a continuous vector observation of space size 24 for 3 aggreagated timesteps of Tennis play. Each tennis racket is controlled by 2 continuous actions in the range [-1,1] that represent its x and y position. We built two neural network for each agent as non-linear function approximation respectively the actor network for continuous action and the critic network to learn value estimate.
+\\
+The algorithm is shared on two steps. First we collect the parallel trajectories by using our approximate optimal policy by  sampling the Gaussian law from the actor network, we calculate the old probability from this behavior and the advantage estimate from the evaluation of the critic network. Then we applied the training process described during the first section and shown here :
+
 During this work, we follow several improvement of the PPO algorithm suggested over the year and in the context of multi-agent learning. We don't use the 
 
 <p align="center">
