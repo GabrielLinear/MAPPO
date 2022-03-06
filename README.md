@@ -33,7 +33,12 @@ The environment is considered solved, when the average (over 100 episodes) of th
 
 ### Results of the algorithm
 
-For more information you can check the [report](https://github.com/GabrielLinear/MADDPG/blob/main/Report.pdf). 
+
+<p align="center">
+  <img src= "https://github.com/GabrielLinear/MAPPO/blob/main/Images/Score_MAPPO.jpg" />
+</p>
+
+For more information you can check the [report](https://github.com/GabrielLinear/MAPPO/blob/main/Report.md). 
 
 
 Source : Mappo paper
