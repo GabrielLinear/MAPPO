@@ -20,7 +20,7 @@ For these experiments the algorithm run on a laptop with a GPU GTX 1050. We lear
 The environment provides a continuous vector observation of space size 24 for 3 aggreagated timesteps of Tennis play. Each tennis racket is controlled by 2 continuous actions in the range [-1,1] that represent its x and y position. We built two neural network for each agent as non-linear function approximation respectively the actor network for continuous action and the critic network to learn value estimate.
 
 The algorithm is shared on two steps. First we collect the parallel trajectories by using our approximate optimal policy by  sampling the Gaussian law from the actor network, we calculate the old probability from this behavior and the advantage estimate from the evaluation of the critic network. Then we applied the training process described during the first section and shown here :
-During this work, we follow several improvement of the PPO algorithm suggested over the year and in the context of multi-agent learning. We don't use the 
+During this work, we follow several improvement of the PPO algorithm suggested over the year and in the context of multi-agent learning.
 
 <p align="center">
   <img src= "https://github.com/GabrielLinear/MAPPO/blob/main/Images/MAPPO_Scheme.jpg" />
