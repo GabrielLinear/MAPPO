@@ -46,7 +46,7 @@ With two different set of hyperparameters to stabilize the training at half the 
 </p>
 
 <p align="center">
-  <img src= "https://github.com/GabrielLinear/MAPPO/blob/main/Images/Scores_mean_zomm.jpg" />
+  <img src= "https://github.com/GabrielLinear/MAPPO/blob/main/Images/Scores_mean_zoom.jpg" />
 </p>
 
 For more information you can check the [report](https://github.com/GabrielLinear/MAPPO/blob/main/Report.md). 
