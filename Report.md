@@ -73,7 +73,7 @@ At the beginning of the training a batch size to big can lead to a difficult lea
 </p>
 
 <p align="center">
-  <img src= "https://github.com/GabrielLinear/MAPPO/blob/main/Images/Scores_mean_zomm.jpg" />
+  <img src= "https://github.com/GabrielLinear/MAPPO/blob/main/Images/Scores_mean_zoom.jpg" />
 </p>
 
 
