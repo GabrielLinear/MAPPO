@@ -61,7 +61,12 @@ We sucessed to achieve great performance with the algorithm used but with some d
 At the beginning of the training a batch size to big can lead to a difficult learning, even impossible but great stability whereas a small one achieve to get a performance of at least 0.2 . At this point the learning process unstabilize and oscilate between 0.2 and 0.4 unable to learn more. Thus, we stabilized the tranning with a bigger batch size and a few epoch.
 
 <p align="center">
-  <img src= "https://github.com/GabrielLinear/MAPPO/blob/main/Images/Score_MAPPO.jpg" />
+  <img src= "https://github.com/GabrielLinear/MAPPO/blob/main/Images/Scores_mean.jpg" />
+</p>
+
+
+<p align="center">
+  <img src= "https://github.com/GabrielLinear/MAPPO/blob/main/Images/Scores_mean_zomm.jpg" />
 </p>
 
 
