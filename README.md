@@ -32,7 +32,7 @@ The observation space and the action space is continuous.The 28 varaibles corres
 The environment is considered solved, when the average (over 100 episodes) of those scores is at least +0.5.
 
 ### Results of the algorithm
-
+With two different set of hyperparameters to stabilize the training at half the trajectory with achieve the +0.5 score wanted for 34000 episodes.
 
 <p align="center">
   <img src= "https://github.com/GabrielLinear/MAPPO/blob/main/Images/Score_MAPPO.jpg" />
