@@ -35,11 +35,11 @@ The environment is considered solved, when the average (over 100 episodes) of th
 With two different set of hyperparameters to stabilize the training at half the trajectory with achieve the +0.5 score wanted for 34000 episodes.
 
 <p align="center">
-  <img src= "https://github.com/GabrielLinear/MAPPO/blob/main/Images/Score_mean.jpg" />
+  <img src= "https://github.com/GabrielLinear/MAPPO/blob/main/Images/Scores_mean.jpg" />
 </p>
 
 <p align="center">
-  <img src= "https://github.com/GabrielLinear/MAPPO/blob/main/Images/Score_mean_zomm.jpg" />
+  <img src= "https://github.com/GabrielLinear/MAPPO/blob/main/Images/Scores_mean_zomm.jpg" />
 </p>
 
 For more information you can check the [report](https://github.com/GabrielLinear/MAPPO/blob/main/Report.md). 
