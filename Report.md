@@ -58,12 +58,19 @@ Table 2. Set of hyperparameters used for training the second half trajectory of 
 
 ## Results
 We sucessed to achieve great performance with the algorithm used but with some difficult adjustements. Indeed we found that there is an inversly proportionnal relation between stability and the slop at some point in the learning process. We find that the parameter that led this behaviour is the Batch_Size.
-At the beginning of the training a batch size to big can lead to a difficult learning, even impossible but great stability whereas a small one achieve to get a performance of at least 0.2 . At this point the learning process unstabilize and oscilate between 0.2 and 0.4 unable to learn more. Thus, we stabilized the tranning with a bigger batch size and a few epoch.
+At the beginning of the training a batch size to big can lead to a difficult learning, even impossible but great stability whereas a small one achieve to get a performance of at least 0.2. At this point the learning process unstabilize and oscilate between 0.2 and 0.4 unable to learn more (at about 24000 episodes where we stop the first learning). Thus, we stabilized the tranning with a bigger batch size and a few epoch.
+
+<p align="center">
+  <b>Training over the 36000 episodes  </b>
+</p>
 
 <p align="center">
   <img src= "https://github.com/GabrielLinear/MAPPO/blob/main/Images/Scores_mean.jpg" />
 </p>
 
+<p align="center">
+  <b>Zoom over the end of the training</b>
+</p>
 
 <p align="center">
   <img src= "https://github.com/GabrielLinear/MAPPO/blob/main/Images/Scores_mean_zomm.jpg" />
