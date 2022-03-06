@@ -3,7 +3,7 @@
 # A Multi-agent Deep Reinforment Learning case study : Unity Tennis environment
 
 <p align="center">
-  <img src= "https://github.com/GabrielLinear/MADDPG/blob/main/Images/Env_solved.gif" />
+  <img src= "https://github.com/GabrielLinear/MAPPO/blob/main/Images/Environment.jpg" />
 </p>
 
 Clone this Git:
