@@ -26,7 +26,7 @@ During this work, we follow several improvement of the PPO algorithm suggested o
   <img src= "https://github.com/GabrielLinear/MAPPO/blob/main/Images/MAPPO_Scheme.jpg" />
 </p>
 
-Table 1. Set of hyperparameters used for training the MAPPO algorithm.
+Table 1. Set of hyperparameters used for training the first half trajectory of the MAPPO algorithm.
 |Hyperparameter | Values |
 | ------------- | ------------- |
 |Epsilon | 0.1 |
@@ -35,16 +35,40 @@ Table 1. Set of hyperparameters used for training the MAPPO algorithm.
 | Network hidden size 1 | 512 |
 | Network hidden size 2 | 256 |
 | Continuous samping distribution | Normal |
-| Variance | 0.5 |
+| Variance | 0.25 |
 | tmax | 2500 |
-| batch size | 128 |
+| batch size | 256 |
 | Sample shuffling | False |
+| SGD Importance samping epoch | 6 |
+
+Table 2. Set of hyperparameters used for training the second half trajectory of the MAPPO algorithm.
+|Hyperparameter | Values |
+| ------------- | ------------- |
+|Epsilon | 0.1 |
+|Beta |    1e-3    |
+|Learning rate  |    2e-4   |
+| Network hidden size 1 | 512 |
+| Network hidden size 2 | 256 |
+| Continuous samping distribution | Normal |
+| Variance | 0.25 |
+| tmax | 5000 |
+| batch size | 1024 |
+| Sample shuffling | False |
+| SGD Importance samping | 3 |
 
 ## Results
+We sucessed to achieve great performance with the algorithm used but with some difficult adjustements. Indeed we found that there is an inversly proportionnal relation between stability and the slop at some point in the learning process. We find that the parameter that led this behaviour is the Batch_Size.
+At the beginning of the training a batch size to big can lead to a difficult learning, even impossible but great stability whereas a small one achieve to get a performance of at least 0.2 . At this point the learning process unstabilize and oscilate between 0.2 and 0.4 unable to learn more. Thus, we stabilized the tranning with a bigger batch size and a few epoch.
+
+<p align="center">
+  <img src= "https://github.com/GabrielLinear/MAPPO/blob/main/Images/Score_MAPPO.jpg" />
+</p>
+
+
 
 ## Discussion
 During our experiments, we have noticed a great difficulty to find the accurate hyperameters that lead to a correct policy optimization. Indeed, after several weeks  of uncessful learning, we finally found a set of working hyperparameter as in the table1. The learning led to a score convergence of the agents close to 0.08. This thresold seemed to be insurmountable barrier before finding the good set.
 
-Moreover, even when we found the great set of hyperparameter, a low learning curve has been shown. Indeed, the environment has been solved after 20 000 episodes rather than other method seems to achieve similar performances under 6000 episodes. A great instability could be the cause of this difficult learning that should lead to further exploration and studies.
+Moreover, even when we found the great set of hyperparameter, a small learning slope has been shown. Indeed, the environment has been solved after 34 000 episodes rather than other methods seems to achieve similar performances under 6000 episodes and without our re-parametrization trick of the hyperparameters. A great instability could be the cause of this difficult learning that should lead to further exploration and studies.
 
-Finally, we suggest for further study to find alternative to this method or used the newest research that seems to improve stability of this algorithm. We can for exemple suggest the PopArt from ( )  that seems to perform well in practice.
+The great performances and stability shown by the original paper of MAPPO from **Chao Yu 2021** has not been shown in our exemple. So we suggest, for further study to used the newest implementations tricks in the paper from that seems to improve stability of this algorithm. We can for exemple suggest PopArt values normalization from **Hado van Hasselt 2016** that seems improve the learning in practice. Also we could tried to used reccurent policy that achieve better performance in practice than ou current naive MLP. We could also look at the impact of batch_normalization on the larning. Finally as suggested on algorithm COMA, the use of hypernetwork to learn the values estimate could add some values to the learning slope
